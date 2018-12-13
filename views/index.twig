@@ -1,0 +1,20 @@
+{% extends "templates/template.twig" %}
+{% block content %}
+    <div class="ed-item s-100">
+        <h1 class="text-center">Sistema para gestionar certificados</h1>
+    </div>
+    <div class="ed-item ed-container s-100">
+        <div class="ed-item s-100 l-50 text-center create-certificate">
+            <h3>Certificados</h3>
+            <i class="far fa-file"></i>
+            <br>
+            <a href="{{ path_for('certificate.list') }}" class="button orange">Entrar</a>
+        </div>
+        <div class="ed-item s-100 l-50 associate-certificate">
+            <h3>Asociar certificados a usuarios</h3>
+            <i class="fas fa-user-graduate"></i>
+            <br>
+            <a href="{{ path_for('association.list') }}" class="button orange">Entrar</a>
+        </div>
+    </div>
+{% endblock %}

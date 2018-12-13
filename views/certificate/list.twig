@@ -1,0 +1,39 @@
+{% extends "templates/template.twig" %}
+{% block content %}
+    <div class="ed-item s-100">
+        <h1 class="text-center">Lista de certificados</h1>
+    </div>
+    <div class="ed-item ed-container s-100 center-block">
+        <table class="hover">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Template</th>
+                    <th>Código</th>
+                    <th>Título</th>
+                    <th>Contenido</th>
+                    <th>Duración</th>
+                    <th>Fecha finalización</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for certificate in certificates %}
+                    <tr>
+                        <td>{{ certificate.tipo }}</td>
+                        <td>{{ certificate.template }}</td>
+                        <td>{{ certificate.codigo }}</td>
+                        <td>{{ certificate.titulo }}</td>
+                        <td>{{ certificate.contenido }}</td>
+                        <td>{{ certificate.duracion }}</td>
+                        <td>{{ certificate.fecha_finalizacion }}</td>
+                        <td>
+                            <a href="{{ path_for('certificate.show', { id: certificate.id }) }}">Editar</a> <br>
+                            <a href="{{ path_for('certificate.delete', { id : certificate.id }) }}">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

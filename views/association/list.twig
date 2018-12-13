@@ -1,0 +1,32 @@
+{% extends "templates/template.twig" %}
+{% block content %}
+    <div class="ed-item s-100">
+        <h1 class="text-center">Lista de usuarios con sus certificados</h1>
+    </div>
+
+    <div class="ed-item ed-container s-100 center-block">
+        <table class="hover">
+            <thead>
+            <tr>
+                <th>Certificado</th>
+                <th>Usuario</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for asso in association %}
+                <tr>
+                    <td>{{ asso.certificate.titulo }}</td>
+                    <td>{{ asso.usuario_id }}</td>
+                    <td>{{ asso.estado }}</td>
+                    <td>
+                        <a href="{{ path_for('association.show', { id: asso.id }) }}">Editar</a> <br>
+                        <a href="{{ path_for('association.delete', { id : asso.id }) }}">Eliminar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

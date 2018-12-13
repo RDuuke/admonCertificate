@@ -1,0 +1,52 @@
+{% extends "templates/template.twig" %}
+{% block content %}
+    <div class="ed-item s-100">
+        <h1 class="text-center">Crear Certificados</h1>
+    </div>
+
+    <div class="ed-item ed-container s-100 l-offset-20 l-60">
+        {% if certificate %}
+            <form action="{{ path_for('certificate.update', { id : certificate.id }) }}" method="post" class="ed-container">
+        {% else %}
+            <form action="{{ path_for('certificate.add') }}" method="post" class="ed-container">
+        {% endif %}
+                <div class="ed-item s-100">
+                    <label for="tipo">Seleccione Tipo</label>
+                    <select name="tipo" id="tipo" required>
+                        <option value="">Seleccione</option>
+                        <option value="1" {{ certificate.tipo == 1 ? 'selected' : '' }}>Vocacional</option>
+                        <option value="0" {{ certificate.tipo == "0" ? 'selected' : '' }}>Externo</option>
+                    </select>
+                </div>
+                <div class="ed-item s-100">
+                    <label for="template">Seleccione template</label>
+                    <select name="template" id="template" required>
+                        <option value="">Seleccione</option>
+                        <option value="arroba" {{ certificate.template == 'arroba' ? 'selected' : '' }} >@Medellín</option>
+                        <option value="colmayor" {{ certificate.template == 'colmayor' ? 'selected' : '' }} >Colmayor</option>
+                        <option value="pascualbravo" {{ certificate.template == 'pascualbravo' ? 'selected' : '' }} >Pascualbravo</option>
+                        <option value="vocacional" {{ certificate.template == 'vocacional' ? 'selected' : '' }} >Vocacional</option>
+                    </select>
+                </div>
+                <div class="ed-item s-100">
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" required value="{{ certificate ? certificate.titulo : '' }}">
+                </div>
+                <div class="ed-item s-100">
+                    <label for="contenido">Contenido</label>
+                    <textarea name="contenido" id="contenido">{{ certificate ? certificate.contenido : '' }}</textarea>
+                </div>
+                <div class="ed-item s-100">
+                    <label for="duracion">Duración</label>
+                    <input type="text" name="duracion" placeholder="00 Horas" value="{{ certificate ? certificate.duracion : '' }}">
+                </div>
+                <div class="ed-item s-100">
+                    <label for="fecha_finalizacion">Fecha de finalización</label>
+                    <input type="text" name="fecha_finalizacion" placeholder="dd/mm/aaaa" value="{{ certificate ? certificate.fecha_finalizacion : '' }}">
+                </div>
+                <div class="ed-item s-100 text-right">
+                    <button class="button orange">Guardar</button>
+                </div>
+            </form>
+    </div>
+{% endblock %}

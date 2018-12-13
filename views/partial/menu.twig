@@ -1,0 +1,10 @@
+<div class="ed-container full">
+    <ul id="menu-module">
+        <li class="{{ module_name == 'cert-upload' ? 'active' : '' }}"><a href="{{ path_for('certificate.upload') }}">Certificado - masivamente</a></li>
+        <li class="{{ module_name == 'cert-show' ? 'active' : '' }}"><a href="{{ path_for('certificate.add') }}">Certificado - individualmente</a></li>
+        <li class="{{ module_name == 'cert-list' ? 'active' : '' }}"><a href="{{ path_for('certificate.list') }}">Certificado - listar</a></li>
+        <li class="{{ module_name == 'aso-upload' ? 'active' : '' }}"><a href="{{ path_for('association.upload') }}">Asociación - masivamente</a></li>
+        <li class="{{ module_name == 'aso-show' ? 'active' : '' }}"><a href="{{ path_for('association.add') }}">Asociación - individualmente</a></li>
+        <li class="{{ module_name == 'aso-list' ? 'active' : '' }}"><a href="{{ path_for('association.list') }}">Asociación - listar</a></li>
+    </ul>
+</div>

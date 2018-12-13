@@ -1,0 +1,30 @@
+{% extends "templates/template.twig" %}
+{% block content %}
+    <div class="ed-item s-100">
+        <h1 class="text-center">Asociar individualmente un certificado</h1>
+    </div>
+    <div class="ed-item ed-container s-100 l-offset-20 l-60">
+        {% if association %}
+            <form action="{{ path_for('association.update', { id : association.id }) }}" method="post" class="ed-container">
+        {% else %}
+            <form action="{{ path_for('association.add') }}" method="post" class="ed-container">
+        {% endif %}
+                <div class="ed-item s-100">
+                    <label for="certificado_id">Seleccione certificado</label>
+                    <select name="certificado_id" id="tipo" required>
+                        <option value="">Seleccione</option>
+                        {% for certificate in certificates %}
+                            <option value="{{ certificate.id }}" {{ association.certificado_id == certificate.id ? "selected" : "" }}>{{ certificate.titulo }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="ed-item s-100">
+                    <label for="usuario_id">Usuario</label>
+                    <input type="text" name="usuario_id" required value="{{ association ? association.usuario_id : '' }}" placeholder="example@example.com">
+                </div>
+                <div class="ed-item s-100 text-right">
+                    <button class="button orange">Guardar</button>
+                </div>
+            </form>
+    </div>
+{% endblock %}

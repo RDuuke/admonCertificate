@@ -1,0 +1,73 @@
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.no-padding{
+    padding: 0 !important;
+}
+.create-certificate, .associate-certificate {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: #2ba6cb;
+    border: 5px solid white;
+    color: white;
+}
+.associate-certificate i, .create-certificate i {
+    font-size: 5em;
+}
+.center-block {
+    margin: auto;
+}
+.orange {
+    background-color: #FF9900 !important;
+    color: white !important;
+}
+
+.errors
+{
+    background-color: #f2dede !important;
+}
+.creators {
+    background-color: #dff0d8 !important;
+}
+
+#menu-module {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: #2ba6cb;
+    list-style: none;
+    width: 100%;
+}
+
+#menu-module li {
+    flex: auto;
+    text-align: center;
+    padding: .5em 0;
+    background-color: #5da423;
+
+}
+#menu-module li.active,
+#menu-module li:hover{
+    background-color: #2f5212;
+}
+#menu-module li:nth-child(n+4){
+    background-color: #cc8b00;
+}
+#menu-module li:nth-child(n+4).active,
+#menu-module li:nth-child(n+4):hover{
+    background-color: #805700 !important;
+}
+#menu-module a {
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+}

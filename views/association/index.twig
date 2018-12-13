@@ -1,0 +1,21 @@
+{% extends "templates/template.twig" %}
+{% block content %}
+    <div class="ed-item s-100">
+        <h1 class="text-center">Módulo asociar certificado a usuarios</h1>
+    </div>
+    <div class="ed-item ed-container s-100">
+        <div class="s-100 ed-item l-1-3 text-center">
+            <h4>Asociar masivamente</h4>
+
+            <a href="{{ path_for('certificate.upload') }}" class="button orange">Entrar</a>
+        </div>
+        <div class="s-100 ed-item l-1-3 text-center">
+            <h4>Asociar individualmente</h4>
+            <a href="{{ path_for('association.add') }}" class="button orange">Entrar</a>
+        </div>
+        <div class="s-100 ed-item l-1-3 text-center">
+            <h4>Listar</h4>
+            <a href="{{ path_for('association.list') }}" class="button orange">Entrar</a>
+        </div>
+    </div>
+{% endblock %}
