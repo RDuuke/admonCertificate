@@ -107,5 +107,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/windows,phpstorm
+config
+
 !config/bootstrap.php
 vendor
