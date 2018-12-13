@@ -71,3 +71,6 @@
     display: block;
     text-decoration: none;
 }
+.dataTables_wrapper {
+    width: 100%;
+}
