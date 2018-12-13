@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b5e1065c90f47630a922faeb9a0c8d8",
+    "content-hash": "cb229c681c4942a3cb5d25a83c2e732e",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -167,7 +167,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.7.15",
+            "version": "5.7.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -212,7 +212,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.7.15",
+            "version": "5.7.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -256,16 +256,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v5.7.15",
+            "version": "5.7.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "9e430b6172f11b10dd324f16342878607e36f00b"
+                "reference": "3594b0c207795acc78d666087ff4269c3a3ad738"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/9e430b6172f11b10dd324f16342878607e36f00b",
-                "reference": "9e430b6172f11b10dd324f16342878607e36f00b",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/3594b0c207795acc78d666087ff4269c3a3ad738",
+                "reference": "3594b0c207795acc78d666087ff4269c3a3ad738",
                 "shasum": ""
             },
             "require": {
@@ -311,20 +311,20 @@
                 "orm",
                 "sql"
             ],
-            "time": "2018-11-26T13:47:24+00:00"
+            "time": "2018-12-11T14:08:37+00:00"
         },
         {
             "name": "illuminate/support",
-            "version": "v5.7.15",
+            "version": "5.7.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "249de04ac08676aa509b8b0f391858535b4e06bb"
+                "reference": "f8b9387034e11980d3953c814b6ad65e2cd244e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/249de04ac08676aa509b8b0f391858535b4e06bb",
-                "reference": "249de04ac08676aa509b8b0f391858535b4e06bb",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/f8b9387034e11980d3953c814b6ad65e2cd244e3",
+                "reference": "f8b9387034e11980d3953c814b6ad65e2cd244e3",
                 "shasum": ""
             },
             "require": {
@@ -370,7 +370,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2018-11-15T13:49:08+00:00"
+            "time": "2018-12-08T15:33:10+00:00"
         },
         {
             "name": "kanellov/slim-twig-flash",
