@@ -2,3 +2,4 @@
 config/
 !config/bootstrap.php
 vendor
+views/templates/template.twig
